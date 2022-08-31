@@ -1,5 +1,5 @@
 ---
-permalink: /projects.html
+permalink: /notenlish.github.io/projects/
 ---
 
 <p> projectttt</p>
