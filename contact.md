@@ -1,0 +1,6 @@
+---
+permalink: /contact.html
+---
+
+c
+
