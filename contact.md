@@ -2,5 +2,4 @@
 permalink: /contact.html
 ---
 
-c
-
+<p> contacttt</p>
