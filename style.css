@@ -62,8 +62,21 @@ body {
   .pfpimg{
     width: 100vw;
     height: 100vh; 
-  
-}
-      
+  }
+
+  section{
+      display: grid;
+      place-items: center;
+      align-content: center;
+      min-height: 10vh;
+  }
+    
+  .hidden{
+    opacity: 0.5;
+    transition: all 1s;
+  }
+  .show{
+    opacity:0;
+  }
 
   
