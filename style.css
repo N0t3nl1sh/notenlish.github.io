@@ -79,4 +79,11 @@ body {
     opacity:0;
   }
 
+  projects-div{
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    align-tracks: center;
+  }
+
   
