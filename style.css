@@ -117,6 +117,10 @@
     font-size: 30px;
   }
 
+  .itch_io_game{
+    border-radius: 12px;
+  }
+
   /*
     .github_project{
       
