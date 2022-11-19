@@ -4,7 +4,6 @@
     
   }
 
-
   .menu_bar{
     background-color: #2D2D2D;
     /* 
@@ -39,6 +38,7 @@
     font-family: 'Inter',sans-serif;
     font-weight: 700;
     cursor:pointer;
+    z-index: 10;
   }
 
   .menu_button:hover {
@@ -59,7 +59,10 @@
     color: #31cb2f;
   }
 
-
+  .something{
+    margin-top:0px;
+    margin-bottom:0px;
+  }
 
   #github_link{
     color: #1275E9;
@@ -87,7 +90,7 @@
       background-color: rgb(15, 15, 15);
       border-radius: 6px;
     /**/
-
+    
     font-size: 24px;
     text-align: center;
     color: #dadada;
@@ -95,20 +98,30 @@
     padding-top: 10px;
     padding-bottom: 10px;
     overflow: hidden;
-
+    z-index: -2;
+    padding-bottom: 10vh;
   }
 
   .profile_wrapper{
     margin: 0;
+    z-index: 1;
   }
 
   .name{
     margin-top:5px;
+    z-index: 10;
+    position: relative;
+  }
+
+  .text{
+    z-index: 10;
+    position: relative;
   }
 
   .about_text{    
     width: 70%;
     margin: auto;
+    z-index: 10;
   }
 
   .projects_title{    
@@ -132,5 +145,19 @@
     width: 180px; 
     height: 180px; 
     image-rendering:optimizeQuality;
+    z-index: 10;
+    position: relative;
   }
 
+
+  .ball{
+    background-color: #1275E9;
+    position: relative;
+    top:40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    z-index: 0;
+    overflow: hidden;
+    opacity: 80%;
+  }
