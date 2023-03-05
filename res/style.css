@@ -1,163 +1,184 @@
-  body {
-    background-color:#131313;
-    font-family:   Arial, sans-serif;
-    
-  }
-
-  .menu_bar{
-    background-color: #2D2D2D;
-    /* 
-    margin: 1vw;
-    */ 
-    padding-right: 1vw;
-    border: 1vw;
-    border-radius: 6px;
-
-
-    /*
-    padding-left: 1vw;
-    padding-top: 0.3vw;
-    padding-bottom: 0.3vw; 
-    */
-  }
-  
-  h1{
-    font-size: 20px;
-  }
-
-  .menu_button{
-    background-color: #2D2D2D;
-    border-style: none;
-    /*
-    border: #1275E9 solid 7px; 
-    */
-    padding: 10px;
-    border-radius: 6px;
-    color: #BFBFBF;
-    font-size: 32px;
-    font-family: 'Inter',sans-serif;
-    font-weight: 700;
-    cursor:pointer;
-    z-index: 10;
-  }
-
-  .menu_button:hover {
-    transition: 0.4s;
-    background-color: #434343;
-  }
-
-  #about_button:hover{
-    transition: 0.3s;
-    color: #1275E9;
-  }
-  #projects_button:hover{
-    transition: 0.3s;
-    color: #E52749;
-  }
-  #contact_button:hover{
-    transition: 0.3s;
-    color: #31cb2f;
-  }
-
-  .something{
-    margin-top:0px;
-    margin-bottom:0px;
-  }
-
-  #github_link{
-    color: #1275E9;
-    text-decoration: none;
-  }
-  #gmail{
-    color: #BFBFBF;
-    text-decoration: none;
-  }
-  #itch_io_link{
-    color: #E52749;
-    text-decoration: none;
-  }
-  #youtube_link{
-    color: #E52749;
-    text-decoration: none;
-  }
-  #discord{
-    color: #1275E9;
-    text-decoration: none;
-  }
-
-  .wrapper{
-    
-      background-color: rgb(15, 15, 15);
-      border-radius: 6px;
-    /**/
-    
-    font-size: 24px;
-    text-align: center;
-    color: #dadada;
-    font-weight: 700;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    overflow: hidden;
-    z-index: -2;
-    padding-bottom: 10vh;
-  }
-
-  .profile_wrapper{
-    margin: 0;
-    z-index: 1;
-  }
-
-  .name{
-    margin-top:5px;
-    z-index: 10;
-    position: relative;
-  }
-
-  .text{
-    z-index: 10;
-    position: relative;
-  }
-
-  .about_text{    
-    width: 70%;
-    margin: auto;
-    z-index: 10;
-  }
-
-  .projects_title{    
-    width: 70%;
-    margin: auto;
-    font-size: 30px;
-  }
-
-  .itch_io_game{
-    border-radius: 12px;
-  }
-
+html{
+  width: 100vw;
+  height: 100vh;
+}
+body{
+  margin: 0;
+  overflow: hidden;
+  font-size: 18px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  background-color: #F2D8CE;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+p {
+  color: #343434;
+  font-size:1.4rem;
+}
+a{
+  text-decoration: none;
+  filter: brightness(1.4);
+  font-size: 1.1em;
+}
+a:hover{
+  filter: brightness(1.8);
+}
+main{
+  flex-grow: 1;
   /*
-    .github_project{
-      
-    }
+  width: 100%;
+  height: 90%;
   */
+}
+footer{
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+body::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(transparent-exposure.webp);
+  background-size: 65%;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  filter: blur(0.3vw) opacity(0.4);
+}
+section{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(100% - 3rem);
+  width: 100%;
+  position: fixed;
+  transition: 0.5s ;
+  left:0px;
+}
+.active{
+  z-index: 2;
+  opacity: 1;
+  transform: translateX(0%);
+}
+.left{
+  transform: translateX(-100%);
+  opacity: 0.2;
+}
+.right{
+  transform: translateX(100%);
+  opacity: 0.2;
+}
+.title-wrapper{
+  display: flex;
+  justify-content: center;
+}
+h1{
+  font-size: 3.1rem;
+  text-align: center;
+  color: #D9644A;
+  margin: 1rem 0;
+}
+.contact-content-wrapper{
+  margin-top: 2rem;
+}
+.content-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  height: 100%;
+}
+.contact-row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-item-wrapper{
+  width: 6rem;
+  height: 6rem;
+  cursor: pointer;
+}
+.contact-item{
+  width: 6rem;
+  height: 6rem;
+  cursor: pointer;
+}
+#discord{fill:#4336b3;}
+#youtube{fill:#b32f20; stroke: #b32f20; stroke-width: 0.3px;}
+#github{fill:#141B26;}
+#linkedin{fill:#1f6d96;} #linkedin:hover{filter:brightness(0.9);}
+#itch{fill:#a72029;} #itch:hover{filter:brightness(1.8);}
+.contact-item:hover{
+  filter: brightness(1.5);
+}
+.profile-picture{
+  width: 10rem;
+  height: 10rem;
+  margin-bottom: -0.5rem;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+#copyright{
+  font-size: 0.95rem;
+  text-align: center;
+  flex-shrink: 1;
+  margin: 0 0 0.1rem 0;
+}
+#blue-link{
+  color:#247EF5;
+}
+#purple-link{
+  color:#803CA8;
+}
+#nav-buttons-wrapper{
+  position: fixed;
+  height: 0px;
+  z-index: 10;
+}
+.nav-button{
+  position: fixed;
+  font-size:4rem;
+  top:calc(50% - 1rem);
+  cursor: pointer;
+  z-index: 9;
+  transition: 0.2s;
+}
+.nav-button:hover{
+  transform: scale(1.1);
+}
+.icon-inner{
+  fill:red;
+}
+.icon-inner svg path:hover{
+  fill: red;
+}
+#right-button{
+  left:calc(100% - 3.9rem);
+}
 
-  .profile_picture{
-    border-radius: 100px;
-    width: 180px; 
-    height: 180px; 
-    image-rendering:optimizeQuality;
-    z-index: 10;
-    position: relative;
+@media only screen and (orientation: landscape){
+  html{font-size: calc(100vh/45)};
+}
+
+@media only screen and (orientation: portrait){
+  html{
+    font-size: calc(100vw/45);
   }
-
-
-  .ball{
-    background-color: #1275E9;
-    position: relative;
-    top:40px;
-    width: 40px;
-    height: 40px;
-    border-radius: 40px;
-    z-index: 0;
-    overflow: hidden;
-    opacity: 80%;
+  body::before {
+    background-size: 75vh;
+    filter: blur(0.3vh) opacity(0.4);
   }
+}
