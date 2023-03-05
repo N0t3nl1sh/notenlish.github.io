@@ -1,4 +1,3 @@
-console.log("Hello World!");
 const prevBtn = document.getElementById('left-button');
 const nextBtn = document.getElementById('right-button');
 let sections = document.querySelectorAll("section");
@@ -10,7 +9,6 @@ nextBtn.addEventListener('click', () => {
     return;
   }
   currentIndex++;
-  console.log(currentIndex);
   updateSections();
 });
 
@@ -19,7 +17,6 @@ prevBtn.addEventListener('click', () => {
     return;
   }
   currentIndex--;
-  console.log(currentIndex);
   updateSections();
 });
 
@@ -53,8 +50,6 @@ function updateSections() {
 }
 
 function copyDiscordName(text){
-  console.log("copyDiscordName");
-  // Copy the text inside the text field
   navigator.clipboard.writeText(text)
     .then(() => {
       alert("Copied the discord name to your clipboard: " + text);

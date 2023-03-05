@@ -17,7 +17,7 @@ body{
 }
 p {
   color: #343434;
-  font-size:1.4rem;
+  font-size:1.5rem;
 }
 a{
   text-decoration: none;
@@ -112,9 +112,9 @@ h1{
   height: 6rem;
   cursor: pointer;
 }
-#discord{fill:#4336b3;}
+#discord{fill:#365cb3;} #discord:hover{filter:brightness(1.2);}
 #youtube{fill:#b32f20; stroke: #b32f20; stroke-width: 0.3px;}
-#github{fill:#141B26;}
+#github{fill:#171f2d;}
 #linkedin{fill:#1f6d96;} #linkedin:hover{filter:brightness(0.9);}
 #itch{fill:#a72029;} #itch:hover{filter:brightness(1.8);}
 .contact-item:hover{
@@ -123,6 +123,7 @@ h1{
 .profile-picture{
   width: 10rem;
   height: 10rem;
+  aspect-ratio: 1;
   margin-bottom: -0.5rem;
   pointer-events: none;
   user-select: none;
@@ -132,13 +133,15 @@ h1{
   -ms-user-select: none;
 }
 #copyright{
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   text-align: center;
   flex-shrink: 1;
   margin: 0 0 0.1rem 0;
 }
 #blue-link{
-  color:#247EF5;
+  color:#276bc3;
+} #blue-link:hover{
+  filter: brightness(1.7);
 }
 #purple-link{
   color:#803CA8;
@@ -159,11 +162,8 @@ h1{
 .nav-button:hover{
   transform: scale(1.1);
 }
-.icon-inner{
-  fill:red;
-}
-.icon-inner svg path:hover{
-  fill: red;
+#left-button{
+  opacity: 0.5;
 }
 #right-button{
   left:calc(100% - 3.9rem);
