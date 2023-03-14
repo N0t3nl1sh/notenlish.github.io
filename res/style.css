@@ -15,6 +15,14 @@ body{
   z-index: -1;
   backdrop-filter: blur(0.3vw);
 }
+@font-face {
+  font-family: 'Inter';
+  src: url('Inter-Black.woff2') format('woff2'),
+      url('Inter-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
 p {
   color: #343434;
   font-size:1.5rem;
@@ -101,11 +109,31 @@ h1{
   height: 6rem;
   cursor: pointer;
 }
-#discord{fill:#365cb3;} #discord:hover{filter:brightness(1.2);}
-#youtube{fill:#b32f20; stroke: #b32f20; stroke-width: 0.3px;}
-#github{fill:#171f2d;}
-#linkedin{fill:#1f6d96;} #linkedin:hover{filter:brightness(0.9);}
-#itch{fill:#a72029;} #itch:hover{filter:brightness(1.8);}
+#discord{
+  fill:#365cb3;
+}
+#discord:hover{
+  filter:brightness(1.2);
+}
+#youtube{
+  fill:#b32f20;
+  stroke: #b32f20;
+  stroke-width: 0.3px;
+}
+#github{
+  fill:#171f2d;
+}
+#linkedin{
+  fill:#1f6d96;
+}
+#linkedin:hover{
+  filter:brightness(0.9);
+}
+#itch{
+  fill:#a72029;
+} #itch:hover{
+  filter:brightness(1.8);
+}
 .contact-item:hover{
   filter: brightness(1.5);
 }
