@@ -83,7 +83,7 @@ section{
   display: flex;
   justify-content: center;
 }
-h1{
+h1, h2{
   font-size: 3.1rem;
   text-align: center;
   color: #D9644A;
