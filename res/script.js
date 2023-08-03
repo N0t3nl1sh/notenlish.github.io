@@ -1,77 +1,49 @@
-addEventListener("DOMContentLoaded", () => {
-  const prevBtn = document.getElementById("left-button");
-  const nextBtn = document.getElementById("right-button");
-  let sections = document.querySelectorAll("section");
-  sections = document.querySelectorAll("section");
-  let currentIndex = 0;
-
-  nextBtn.addEventListener("click", () => {
-    if (currentIndex === sections.length - 1) {
-      return;
-    }
-    currentIndex++;
-    updateSections();
-  });
-
-  prevBtn.addEventListener("click", () => {
-    if (currentIndex === 0) {
-      return;
-    }
-    currentIndex--;
-    updateSections();
-  });
-
-  function updateSections() {
-    if (currentIndex === 0) {
-      prevBtn.style.opacity = "0.5";
-    } else if (currentIndex === sections.length - 1) {
-      nextBtn.style.opacity = "0.5";
-    } else {
-      prevBtn.style.opacity = "1";
-      nextBtn.style.opacity = "1";
-    }
-
-    sections.forEach((section, index) => {
-      if (index === currentIndex) {
-        section.classList.add("active");
-        section.classList.remove("left");
-        section.classList.remove("right");
-        section.style.left = "0px";
-      } else {
-        // not the current section
-        section.classList.remove("active");
-        if (index > currentIndex) {
-          // section is to the left of the section we want to show
-          section.classList.add("right");
-          section.classList.remove("left");
-        } else {
-          // section is to the right of the section we want to show
-          section.classList.remove("right");
-          section.classList.add("left");
-        }
-      }
-    });
-  }
-});
-
-function copyDiscordName(text) {
+function copyDiscordName(e) {
   navigator.clipboard
-    .writeText(text)
+    .writeText(e)
     .then(() => {
-      alert("Copied the discord name to your clipboard: " + text);
+      alert("Copied the discord name to your clipboard: " + e);
     })
-    .catch((err) => {
-      console.error("Could not copy text: ", err);
+    .catch((e) => {
+      console.error("Could not copy text: ", e);
     });
 }
-
-const footer = document.getElementById("footer");
-const lol = document.getElementById("lol");
-
+addEventListener("DOMContentLoaded", () => {
+  let e = document.getElementById("left-button"),
+    t = document.getElementById("right-button"),
+    o = document.querySelectorAll("section");
+  o = document.querySelectorAll("section");
+  let l = 0;
+  function s() {
+    0 === l
+      ? (e.style.opacity = "0.5")
+      : l === o.length - 1
+      ? (t.style.opacity = "0.5")
+      : ((e.style.opacity = "1"), (t.style.opacity = "1")),
+      o.forEach((e, t) => {
+        t === l
+          ? (e.classList.add("active"),
+            e.classList.remove("left"),
+            e.classList.remove("right"),
+            (e.style.left = "0px"))
+          : (e.classList.remove("active"),
+            t > l
+              ? (e.classList.add("right"), e.classList.remove("left"))
+              : (e.classList.remove("right"), e.classList.add("left")));
+      });
+  }
+  t.addEventListener("click", () => {
+    l !== o.length - 1 && (l++, s());
+  }),
+    e.addEventListener("click", () => {
+      0 !== l && (l--, s());
+    });
+});
+const footer = document.getElementById("footer"),
+  lol = document.getElementById("lol");
 footer.addEventListener("mouseover", () => {
   lol.classList.add("visible");
-});
-
-footer.addEventListener("mouseout", () => {
-  lol.classList.remove("visible");
-});
+}),
+  footer.addEventListener("mouseout", () => {
+    lol.classList.remove("visible");
+  });
