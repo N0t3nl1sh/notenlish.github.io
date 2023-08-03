@@ -1,0 +1,4 @@
+# first write spesific bots then general user agents https://www.semrush.com/blog/beginners-guide-robots-txt/
+User-agent: *
+allow: /
+Sitemap: https://notenlish.github.io/sitemap.xml
