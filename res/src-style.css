@@ -213,18 +213,6 @@ footer {
   position: relative;
 }
 
-#lol {
-  opacity: 0;
-  position: absolute;
-  transition: all 250ms ease-in-out;
-  top: 0;
-}
-
-#lol.visible {
-  opacity: 1;
-  top: -1.5rem;
-}
-
 .projects__content-wrapper {
   overflow: scroll;
   overflow-x: hidden;

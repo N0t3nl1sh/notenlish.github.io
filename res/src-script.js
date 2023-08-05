@@ -64,14 +64,3 @@ function copyDiscordName(text) {
       console.error("Could not copy text: ", err);
     });
 }
-
-const footer = document.getElementById("footer");
-const lol = document.getElementById("lol");
-
-footer.addEventListener("mouseover", () => {
-  lol.classList.add("visible");
-});
-
-footer.addEventListener("mouseout", () => {
-  lol.classList.remove("visible");
-});
