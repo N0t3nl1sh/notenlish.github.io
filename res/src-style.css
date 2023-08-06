@@ -235,6 +235,45 @@ footer {
   display: none;
 }
 
+@media only screen and (max-width: 1200px) {
+  .projects__content-wrapper {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+    .projects__content-wrapper {
+      width: 55%;
+    }
+}
+@media only screen and (max-width: 850px) {
+    .projects__content-wrapper {
+      width: 65%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .projects__content-wrapper {
+      width: 75%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .projects__content-wrapper {
+      grid-template-columns: 1fr;
+      width: 55%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .projects__content-wrapper {
+      width: 62%;
+    }
+    .project-item {
+        margin-bottom: 2rem;
+    }
+}
+
 .project-item {
   height: 100%;
   border-radius: 12px;
