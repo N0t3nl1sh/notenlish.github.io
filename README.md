@@ -1,3 +1,3 @@
 ## My website
 
-A simple website for my account, written in JS, HTML and CSS.
+Currently being remaked in Next.js. Folder is `ihsancarkci`

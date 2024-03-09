@@ -1,0 +1,4 @@
+node_modules/
+# src/public/
+v2/notenlish.github.io/.env
+src/.next/
